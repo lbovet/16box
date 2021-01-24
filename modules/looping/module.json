@@ -1,0 +1,10 @@
+{
+    "display" : "Looping",
+    "parameters" :  [
+        ["pct", "r-thru-gain-a1","Thru Gain",0,200,100]
+    ],
+    "pages" : [
+        ["pg_a1","Module A1", ["r-bypass-a1", "r-gain-a1", "r-thru-gain-a1", "r-notethru-a1"]]
+     ]
+}
+

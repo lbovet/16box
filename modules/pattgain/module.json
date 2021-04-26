@@ -1,0 +1,13 @@
+{
+    "display" : "PattGain",
+    "parameters" :  [
+        ["pct","pgain_gon","Gain On",0,200,100],
+        ["pct","pgain_goff","Gain Off",0,200,0],
+        ["int","pgain_grps","Groups",0,15,15],
+        ["int","pgain_bars","Bars",0,15,15]
+    ],
+    "pages" : [
+        ["pg_main","Main",["pgain_gon", "pgain_goff", "pgain_grps", "pgain_bars"]]
+    ]
+}
+

@@ -4,7 +4,7 @@ akai=$(aconnect -i | grep client.*MPK | cut -f2 -d" ")0
 
 root=$PWD
 cd $root/ext/Orac/Core/orac
-puredata main.pd ../../../../modules/control/knobs.pd &
+puredata main.pd  &
 sleep 1
 aconnect $akai 128:0
 aconnect 128:1 $akai

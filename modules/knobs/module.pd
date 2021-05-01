@@ -190,7 +190,7 @@
 #X obj 234 98 t b b;
 #X obj 272 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 288 178 int 6101;
+#X obj 288 178 int 6201;
 #X obj 160 153 symbol;
 #X msg 182 123 localhost;
 #X obj 315 424 s knobs-oscIn;

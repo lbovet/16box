@@ -1,4 +1,4 @@
-#N canvas 777 226 798 539 10;
+#N canvas 913 259 766 522 10;
 #X declare -path externals;
 #N canvas 948 54 960 997 module 0;
 #X obj 171 21 ctlin;
@@ -147,11 +147,11 @@
 #X obj 100 43 cnv 15 200 20 empty page empty 20 12 0 14 -233017 -66577
 0;
 #X obj 66 92 hsl 32 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 775 1;
+-1 -1 0 1;
 #X obj 199 91 hsl 32 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 3100 1;
+-1 -1 0 1;
 #X obj 262 91 hsl 32 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 1538 1;
+-1 -1 0 1;
 #X obj 132 91 hsl 32 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
 -1 -1 0 1;
 #X obj 191 108 cnv 15 50 16 empty p3Desc empty 4 8 0 8 -233017 -66577
@@ -731,6 +731,68 @@
 #X obj 130 71 knob 2 \$1;
 #X obj 196 71 knob 3 \$1;
 #X obj 259 71 knob 4 \$1;
+#N canvas 269 324 825 466 menu 0;
+#N canvas 950 466 576 469 nav 0;
+#X obj 10 3 bng 30 250 50 0 NavPrev empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 10 103 bng 30 250 50 0 NavNext empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 40 50 bng 30 250 50 0 NavActivate empty empty 17 7 0 10 -204786
+-4034 -4034;
+#X obj 226 152 r NavActivate;
+#X msg 226 233 send /NavActivate 1;
+#X obj 23 151 r NavPrev;
+#X obj 124 151 r NavNext;
+#X msg 23 232 send /NavPrev 1;
+#X msg 124 232 send /NavNext 1;
+#X obj 23 275 s knobs-oscOut;
+#X obj 124 275 s knobs-oscOut;
+#X obj 226 276 s knobs-oscOut;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X coords 0 9 85 135 85 135 2 0 0;
+#X restore 314 24 pd nav;
+#X obj 9 24 menudisp;
+#N canvas 807 385 1014 666 keyboard 0;
+#X obj 50 287 keyname;
+#X obj 114 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 49 342 spigot 1;
+#X obj 50 316 pack 0 s;
+#X obj 49 363 route 1;
+#X obj 47 440 s PageNext;
+#X obj 120 441 s PagePrev;
+#X obj 100 480 s NavActivate;
+#X obj 198 544 s ModNext;
+#X obj 276 544 s ModPrev;
+#X obj 192 480 s NavPrev;
+#X obj 264 480 s NavNext;
+#X obj 49 394 route Next Prior Return Up Down Right Left;
+#X msg 75 266 1;
+#X obj 75 234 loadbang;
+#X text 107 102 enable/disable keyboard;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 1 0 2 1;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 12 0;
+#X connect 12 0 5 0;
+#X connect 12 1 6 0;
+#X connect 12 2 7 0;
+#X connect 12 3 10 0;
+#X connect 12 4 11 0;
+#X connect 12 5 8 0;
+#X connect 12 6 9 0;
+#X connect 13 0 1 0;
+#X connect 14 0 13 0;
+#X coords 0 0 1 1 200 60 2 100 100;
+#X restore 10 166 pd keyboard;
+#X restore 255 128 pd menu;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 15 0 14 0;

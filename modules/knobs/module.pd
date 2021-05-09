@@ -1,4 +1,4 @@
-#N canvas 1183 147 547 457 10;
+#N canvas 1182 147 547 457 10;
 #X declare -path externals;
 #N canvas 947 54 960 997 module 0;
 #X obj 171 21 ctlin;
@@ -155,13 +155,13 @@
 #X restore 160 144 pd page;
 #X obj 160 165 s page;
 #X obj 17 70 hsl 44 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 1075 1;
+-1 -1 1830 1;
 #X obj 150 69 hsl 44 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 4300 1;
+-1 -1 897 1;
 #X obj 213 69 hsl 44 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 0 1;
-#X obj 83 69 hsl 44 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
 -1 -1 2150 1;
+#X obj 83 69 hsl 44 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 4300 1;
 #X obj 146 87 cnv 15 50 16 empty p3Desc empty 4 8 0 8 -233017 -66577
 0;
 #X obj 209 87 cnv 15 50 16 empty p4Desc empty 4 8 0 8 -233017 -66577
@@ -540,7 +540,7 @@
 #X connect 42 0 41 0;
 #X connect 43 0 33 0;
 #X restore 210 144 pd nav;
-#N canvas 0 54 1918 997 tracks 1;
+#N canvas 0 54 1918 997 tracks 0;
 #X obj 286 456 s rackMsgs;
 #X obj 40 26 ctlin 20;
 #X obj 105 26 ctlin 21;
@@ -617,7 +617,7 @@
 #X obj 159 393 spigot;
 #X obj 141 349 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 626 199 s unselect;
+#X obj 617 189 s unselect;
 #X obj 35 323 r unselect;
 #X obj 70 356 f 0;
 #X obj 54 284 sel 0;
@@ -632,15 +632,13 @@
 #X msg 689 410 send /pattern 65536;
 #X obj 290 392 change;
 #X obj 739 168 unpack;
-#X obj 696 198 expr ($i1-97)*4 + $i2-49;
-#X obj 699 237 change;
+#X obj 698 192 expr ($i1-97)*4 + $i2-49;
 #X obj 654 289 expr $i1/4+97;
 #X obj 746 290 expr $i1%4+49;
 #X obj 745 325 pack;
-#X obj 722 217 moses 15;
-#X obj 669 218 sel 0;
 #X obj 542 353 s track;
 #X obj 704 260 t f f f f;
+#X obj 701 227 change -1;
 #X connect 1 0 4 0;
 #X connect 1 0 6 0;
 #X connect 2 0 4 0;
@@ -740,18 +738,15 @@
 #X connect 80 0 81 0;
 #X connect 80 1 81 1;
 #X connect 81 0 87 0;
-#X connect 82 0 89 0;
-#X connect 83 0 85 0;
-#X connect 84 0 85 1;
-#X connect 85 0 76 0;
+#X connect 82 0 84 0;
+#X connect 83 0 84 1;
+#X connect 84 0 76 0;
 #X connect 86 0 82 0;
-#X connect 87 0 82 0;
-#X connect 87 1 86 0;
-#X connect 89 0 83 0;
-#X connect 89 1 84 0;
-#X connect 89 1 88 0;
-#X connect 89 2 71 0;
-#X connect 89 3 78 0;
+#X connect 86 1 83 0;
+#X connect 86 1 85 0;
+#X connect 86 2 71 0;
+#X connect 86 3 78 0;
+#X connect 87 0 86 0;
 #X restore 160 185 pd tracks;
 #X obj 14 49 knob 1 \$1;
 #X obj 13 121 r loadbang-\$1;
@@ -836,7 +831,7 @@
 #X obj 150 160 / 127;
 #X obj 315 340 s rackMsgs;
 #X msg 50 274 set getparam s1 r-chout-gain-\$1 0 trackvol;
-#X msg 41 327 getparam s1 r-chout-gain-a2 0 trackvol;
+#X msg 41 327 getparam s1 r-chout-gain-b1 0 trackvol;
 #X obj 331 265 pack f s;
 #X msg 322 300 setparam s1 r-chout-gain-\$2 \$1;
 #X connect 1 0 13 0;

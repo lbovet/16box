@@ -9,7 +9,7 @@
 			"e_vel_1":	100,
 			"e_notes_1":	4,
 			"e_note_1":	60,
-			"e_off_1":	6,
+			"e_off_1":	8,
 			"e_off_3":	4,
 			"e_len_1":	16,
 			"e_len_4":	16,
@@ -68,10 +68,10 @@
 	"a1-4":	{
 		"moduleType":	"pattgain",
 		"params":	{
-			"pgain_bars":	11,
-			"pgain_grps":	13,
+			"pgain_bars":	5,
+			"pgain_grps":	15,
 			"pgain_gon":	80.314957,
-			"pgain_goff":	48.818897
+			"pgain_goff":	0
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -268,10 +268,10 @@
 			"f_decay":	500,
 			"pb_range":	2,
 			"e_decay":	279.527557,
-			"f_cutoff":	11929.133789,
+			"f_cutoff":	590.551208,
 			"o_colour":	28.346458,
-			"f_env_amt":	57.480316,
-			"f_reson":	59.055119,
+			"f_env_amt":	0,
+			"f_reson":	18.110237,
 			"f_attack":	0
 		},
 		"midi-mapping":	{
@@ -534,8 +534,13 @@
 		}
 	},
 	"c2-1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"fx/delay",
 		"params":	{
+			"thru_gain":	0,
+			"dly_fb":	32.283463,
+			"dly_hip":	1417.322876,
+			"dly_dw":	31.496063,
+			"dly_time":	448.818909
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -586,8 +591,12 @@
 		}
 	},
 	"c3-1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"fx/chorus",
 		"params":	{
+			"thru_gain":	0,
+			"chor_mod":	85.039368,
+			"chor_dw":	98.425201,
+			"chor_freq":	4.228347
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -638,8 +647,12 @@
 		}
 	},
 	"c4-1":	{
-		"moduleType":	"utility/empty",
+		"moduleType":	"fx/reverb",
 		"params":	{
+			"rev_damp":	35.039371,
+			"rev_dw":	97.244095,
+			"thru_gain":	0,
+			"rev_size":	79
 		},
 		"midi-mapping":	{
 			"cc":	{
@@ -977,8 +990,8 @@
 			"r-gain-p1":	100,
 			"r-thru-gain-p1":	100,
 			"r-chout-r-pan-d4":	1,
-			"r-chin-r-pan-d4":	1,
-			"r-chin-r-gain-d4":	0,
+			"r-chin-r-pan-d4":	0.503937,
+			"r-chin-r-gain-d4":	100.787399,
 			"r-chout-midich-d4":	0,
 			"r-midi-ppreset-cc":	100,
 			"r-chout-r-pan-d3":	1,
@@ -986,7 +999,7 @@
 			"r-chin-midigate-d3":	1,
 			"r-chout-r-pan-d2":	1,
 			"r-chout-l-pan-d2":	0,
-			"r-chin-r-pan-d2":	1,
+			"r-chin-r-pan-d2":	0.496063,
 			"r-chout-gain-d2":	100,
 			"r-chin-l-gain-d2":	0,
 			"r-chout-midich-d2":	0,
@@ -994,31 +1007,31 @@
 			"r-chin-midigate-d2":	1,
 			"r-chout-r-pan-d1":	1,
 			"r-chout-l-pan-d1":	0,
-			"r-chin-r-pan-d1":	1,
+			"r-chin-r-pan-d1":	0.496063,
 			"r-chout-gain-d1":	100,
 			"r-chin-l-gain-d1":	0,
 			"r-chout-midich-d1":	0,
 			"r-chin-midigate-d1":	1,
 			"r-midi-expcc":	4,
 			"r-chout-l-pan-c4":	0,
-			"r-chin-l-gain-c4":	0,
+			"r-chin-l-gain-c4":	100.787399,
 			"r-chout-midich-c4":	0,
 			"r-chin-midich-c4":	1,
 			"r-chin-midigate-c4":	1,
 			"r-chout-l-pan-c3":	0,
 			"r-chin-r-pan-c3":	1,
-			"r-chin-l-pan-c3":	0,
-			"r-chout-gain-c3":	100,
-			"r-chin-l-gain-c3":	0,
+			"r-chin-l-pan-c3":	0.496063,
+			"r-chout-gain-c3":	137.795212,
+			"r-chin-l-gain-c3":	100.787399,
 			"r-chout-midich-c3":	0,
-			"r-chin-r-gain-d1":	0,
+			"r-chin-r-gain-d1":	100.787399,
 			"r-chin-midich-c3":	1,
 			"r-chout-l-pan-c2":	0,
 			"r-chin-r-pan-c2":	1,
-			"r-chin-l-pan-c2":	0,
-			"r-chout-gain-c2":	100,
+			"r-chin-l-pan-c2":	0.496063,
+			"r-chout-gain-c2":	98.425201,
 			"r-chin-r-gain-c2":	0,
-			"r-chin-l-gain-c2":	0,
+			"r-chin-l-gain-c2":	100.787399,
 			"r-chout-midich-c2":	0,
 			"r-chout-r-pan-c1":	1,
 			"r-chout-l-pan-c1":	0,
@@ -1069,13 +1082,13 @@
 			"r-notethru-c2-4":	0,
 			"r-bypass-b4-2":	0,
 			"r-gain-b3-1":	100,
-			"r-chin-l-pan-c4":	0,
+			"r-chin-l-pan-c4":	0.496063,
 			"r-bypass-c2-2":	0,
-			"r-chin-l-pan-c1":	0,
+			"r-chin-l-pan-c1":	0.496063,
 			"r-notethru-c4-4":	0,
 			"r-thru-gain-b4-1":	100,
 			"r-thru-gain-c4-2":	100,
-			"r-chin-r-gain-d3":	0,
+			"r-chin-r-gain-d3":	100.787399,
 			"r-chout-gain-b2":	200,
 			"r-gain-c2-4":	100,
 			"r-gain-b4-3":	100,
@@ -1096,7 +1109,7 @@
 			"r-notethru-b3-1":	0,
 			"r-chout-r-pan-c3":	1,
 			"r-thru-gain-b3-3":	100,
-			"r-chin-r-pan-d3":	1,
+			"r-chin-r-pan-d3":	0.496063,
 			"r-notethru-a2-4":	0,
 			"r-notethru-b3-4":	0,
 			"r-notethru-b3-2":	0,
@@ -1206,7 +1219,7 @@
 			"r-thru-gain-b1-1":	100,
 			"r-bypass-c4-1":	0,
 			"r-thru-gain-b3-1":	100,
-			"r-chout-gain-b1":	102.362297,
+			"r-chout-gain-b1":	200,
 			"r-gain-c2-2":	100,
 			"r-thru-gain-a3-3":	100,
 			"r-notethru-a3-4":	0,
@@ -1252,7 +1265,7 @@
 			"r-chin-r-gain-a1":	0,
 			"r-notethru-a1-4":	0,
 			"r-chout-l-pan-b1":	0,
-			"r-chin-r-gain-d2":	0,
+			"r-chin-r-gain-d2":	100.787399,
 			"r-chout-gain-a3":	100,
 			"r-bypass-a2-4":	0,
 			"r-notethru-b2-1":	0,
@@ -1277,7 +1290,7 @@
 			"r-chout-gain-b3":	100,
 			"r-bypass-c3-3":	0,
 			"r-gain-c3-4":	100,
-			"r-chin-l-gain-c1":	0,
+			"r-chin-l-gain-c1":	100.787399,
 			"r-gain-d2-2":	100,
 			"r-notethru-c3-4":	0,
 			"r-chin-r-gain-a3":	0,
